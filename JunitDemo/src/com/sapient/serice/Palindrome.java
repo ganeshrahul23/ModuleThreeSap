@@ -1,5 +1,9 @@
 package com.sapient.serice;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Palindrome {
 	
 	public boolean checkPal(String str){
@@ -14,5 +18,21 @@ public class Palindrome {
 		}
 		
 		return res;
+	}
+	
+	public String[] reverseName(String[] arr){
+		String [] nArr;
+		if(arr == null)
+			return null;
+		else	
+		{
+			nArr = new String[arr.length];
+			StringBuilder sb = null;
+			for(int i = 0; i<arr.length; i++){
+				sb = new StringBuilder(arr[i]).reverse();
+				nArr[i] = sb.toString();
+			}
+			return nArr;
+		}						
 	}
 }
