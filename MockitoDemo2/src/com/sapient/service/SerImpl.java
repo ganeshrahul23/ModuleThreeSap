@@ -21,26 +21,21 @@ public class SerImpl implements ISer {
 		Comparator<Emp> comp = null;
 		switch (order) 
 		{
-			case "id": comp = (Emp e1, Emp e2) -> {	Integer i1 = e1.getEid();
-													Integer i2 = e2.getEid();
-													return i1.compareTo(i2);
-												};
+			case "id": comp = (Emp e1, Emp e2) -> {	Integer i1 = e1.getEid();Integer i2 = e2.getEid();return i1.compareTo(i2);};
 							  break;
 												
 			case "name": comp = (Emp e1, Emp e2) -> {return e1.getEname().compareTo(e2.getEname());};
 								break;		
 			
-			case "salary": comp = (Emp e1, Emp e2) -> {	Double i1 = e1.getSal();
-														Double i2 = e2.getSal();
-														return i1.compareTo(i2);
-													};
+			case "salary": comp = (Emp e1, Emp e2) -> {	Double i1 = e1.getSal();Double i2 = e2.getSal();return i1.compareTo(i2);};
 								  break;
-			default:
+			default:comp = null;
 				break;
 		}
-		
-		Collections.sort(lst, comp);
-		
+		if(comp == null)
+			return null;		
+		//Collections.sort(lst, comp);
+		lst.sort(comp);
 		return lst;
 	}
 

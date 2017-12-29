@@ -67,8 +67,7 @@ public class EmpTest {
 		salList.add(e1);
 		salList.add(e4);
 		salList.add(e2);
-		salList.add(e5);
-		
+		salList.add(e5);	
 	}
 	
 	@BeforeEach
@@ -117,5 +116,12 @@ public class EmpTest {
 		List<Emp> actual = ser.viewEmployee("salary");
 		assertTrue(salList.size()==actual.size());
 	}
+	
+	@Test
+	public void testEmp7(){
+		assertNull(ser.viewEmployee("aaa"));
+	}
+	
+	
 		
 }
