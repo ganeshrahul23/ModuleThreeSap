@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
@@ -47,6 +49,12 @@ public class PalTest {
 	@Test
 	public void testPal5(){
 		assertTrue(pal.checkPal("nitin"));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(strings={"nitin","mam","hello",""})
+	public void testPalAll(String str){
+		assertTrue(pal.checkPal(str));
 	}
 	
 
