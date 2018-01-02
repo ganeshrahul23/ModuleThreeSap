@@ -1,0 +1,12 @@
+2018-01-02 15:03:03,360 [main] DEBUG  sapient - hashmap inint
+2018-01-02 15:03:03,362 [main] INFO   sapient - accound ID 1001 found
+2018-01-02 15:03:03,364 [main] INFO   sapient - accound ID 1002 found
+2018-01-02 15:09:56,610 [main] DEBUG  sapient - hashmap inint
+2018-01-02 15:09:56,613 [main] INFO   sapient - accound ID 1001 found
+2018-01-02 15:09:56,614 [main] INFO   sapient - accound ID 1002 found
+2018-01-02 15:14:34,653 [main] TRACE  sapient - static block
+2018-01-02 15:14:34,656 [main] DEBUG  sapient - hashmap inint
+2018-01-02 15:14:34,656 [main] INFO   sapient - accound ID 1001 found
+2018-01-02 15:14:34,658 [main] TRACE  sapient - hai
+2018-01-02 15:14:34,658 [main] INFO   sapient - accound ID 1002 found
+2018-01-02 15:14:34,658 [main] TRACE  sapient - hai

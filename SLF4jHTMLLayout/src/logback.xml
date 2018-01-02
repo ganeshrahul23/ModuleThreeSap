@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="htmlAppender" class="ch.qos.logback.core.FileAppender">
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="ch.qos.logback.classic.html.HTMLLayout">
+				<pattern>%relative%thread%mdc%level%logger%msg</pattern>
+			</layout>
+		</encoder>
+		<file>test.html</file>
+	</appender>
+
+	<appender name="xmlAppender" class="ch.qos.logback.core.FileAppender">
+		<file>test.xml</file>
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="ch.qos.logback.classic.log4j.XMLLayout">
+				<locationInfo>true</locationInfo>
+			</layout>
+		</encoder>
+	</appender>
+
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.core.encoder.PatternLayoutEncoder">
+			<pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+
+	<logger name="sapient" level="tarce" additivity="false">
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="htmlAppender" />
+		<appender-ref ref="xmlAppender" />
+	</logger>
+
+
+</configuration>
