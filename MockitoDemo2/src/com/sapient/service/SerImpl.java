@@ -1,6 +1,5 @@
 package com.sapient.service;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -34,7 +33,6 @@ public class SerImpl implements ISer {
 		}
 		if(comp == null)
 			return null;		
-		//Collections.sort(lst, comp);
 		lst.sort(comp);
 		return lst;
 	}

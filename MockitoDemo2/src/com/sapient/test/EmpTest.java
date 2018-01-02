@@ -1,8 +1,12 @@
 package com.sapient.test;
 
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,20 +16,11 @@ import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 
 import com.sapient.dao.IDao;
 import com.sapient.service.ISer;
 import com.sapient.service.SerImpl;
 import com.sapient.vo.Emp;
-
-import static org.mockito.Mockito.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assumptions.*;
 
 import name.falgout.jeffrey.testing.junit5.MockitoExtension;
 
@@ -85,6 +80,7 @@ public class EmpTest {
 	public void testEmp1(){
 		List<Emp> actual = ser.viewEmployee("id");
 		assertEquals(idList, actual);
+		verify(dao, times(1)).getEmployee();
 	}
 	
 	@Test

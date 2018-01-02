@@ -8,7 +8,6 @@ import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 
 import com.sapient.dao.IDao;
 import com.sapient.exceptions.BalException;
