@@ -1,0 +1,5 @@
+com\sapient\service\Palindrome.class
+com\sapient\service\CalcService.class
+com\sapient\service\AgeException.class
+com\sapient\service\LoanService.class
+com\sapient\service\IncomeException.class
