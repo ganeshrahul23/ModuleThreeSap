@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.sapient.test.PalTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec <<< FAILURE!
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.07 sec <<< FAILURE!
 [3] hello(testPalAll(String))  Time elapsed: 0.006 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:48)
